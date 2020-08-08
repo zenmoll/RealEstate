@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.dao.RealEstateMapper" >
+    <resultMap id="BaseResultMap" type="com.qf.pojo.RealEstate" >
+        <id column="realEstate_id" property="realEstateId" jdbcType="INTEGER" />
+        <result column="realEstate_projectName" property="realEstateProjectName" jdbcType="VARCHAR" />
+        <result column="realEstate_propertyOwner" property="realEstatePropertyOwner" jdbcType="VARCHAR" />
+        <result column="realEstate_identityCard" property="realEstateIdentityCard" jdbcType="VARCHAR" />
+        <result column="realEstate_housingTypes" property="realEstateHousingTypes" jdbcType="VARCHAR" />
+        <result column="realEstate_usableArea" property="realEstateUsableArea" jdbcType="INTEGER" />
+        <result column="realEstate_constructionTime" property="realEstateConstructionTime" jdbcType="DATE" />
+
+    </resultMap>
+    <select id="findAll" resultType="com.qf.pojo.RealEstate">
+      select * from realestate
+  </select>
+</mapper>
